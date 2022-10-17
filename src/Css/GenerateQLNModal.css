@@ -1,0 +1,87 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+.modal-content {
+  width: 500px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.modal-header,
+.modal-footer {
+  padding: 10px;
+}
+
+.modal-title {
+  margin: 0;
+  text-align: center;
+}
+
+.modal-body {
+  padding: 10px;
+  border: 1px 0 solid #eee;
+}
+
+.modal-body .GenerateQLNModalfrm > div {
+  padding: 15px 15px;
+}
+
+.modal-body .GenerateQLNModalfrm label {
+  width: 150px;
+  display: inline-block;
+}
+
+.modal-body .GenerateQLNModalfrm input {
+  margin-top: 5px;
+  width: 435px;
+  height: 35px;
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 0 5px;
+}
+
+.modal-body .GenerateQLNModalfrm .generateQLNbtn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-body .GenerateQLNModalfrm .generateQLNbtn > button {
+  padding: 10px 40px;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.modal-body .GenerateQLNModalfrm .generateQLNbtn .cancel {
+  background-color: transparent;
+  border: 1px solid #800000;
+}
+
+.modal-body .GenerateQLNModalfrm .generateQLNbtn .submit {
+  background-color: #800000;
+  color: white;
+  border: none;
+}
+
+.modal-body .GenerateQLNModalfrm .generateQLNbtn .submit:hover {
+  background-color: #a70000;
+}
+
+.GenerateQLNModalfrm input:focus {
+  outline: none !important;
+  border: none;
+  box-shadow: 0 0 10px #800000;
+}
+
+.req {
+  color: red;
+}

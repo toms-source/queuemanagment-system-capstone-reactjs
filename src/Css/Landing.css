@@ -1,0 +1,146 @@
+.landing .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: #800000;
+  height: 10vh;
+  box-shadow: 0px 25px 16px -17px rgba(0, 0, 0, 0.11);
+}
+
+.landing .header .logo {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-left: 50px;
+}
+
+.landing .header .logo .landingLogo {
+  height: 40px;
+  width: 40px;
+}
+
+.landing .header .logo .pup {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.landing .header .logo .pup > div {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 2px;
+  color: #fff;
+}
+
+.landing .header .admin {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #fff;
+  margin-right: 50px;
+}
+
+.landing .body-section {
+  height: 90vh;
+}
+
+.landing .body-section .imgLine {
+  height: 550px;
+  width: 500px;
+}
+.landing .body-section .body .element .tagline h2 {
+  font-family: "Permanent Marker", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #ffd700;
+}
+.landing .body-section .body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: inherit;
+}
+.landing .body-section .body .element .buttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  gap: 10px;
+}
+.landing .body-section .body .element .buttons > button {
+  border: none;
+  font-weight: 300;
+  font-size: 1.4rem;
+  border-radius: 15px;
+  padding: 15px 20px;
+  background-color: #800000;
+  color: white;
+  cursor: pointer;
+}
+.landing .body-section .body .element .buttons > button:hover {
+  background: #a70000;
+}
+
+@media only screen and (max-width: 938px) {
+  .landing .body-section .imgLine {
+    height: 350px;
+    width: 350px;
+  }
+  .landing .body-section .body .element .tagline h2 {
+    font-size: 1.4rem;
+  }
+}
+@media only screen and (max-width: 746px) {
+  .landing .header {
+    justify-content: center;
+  }
+  .landing .header .admin {
+    display: none;
+  }
+  .landing .header .logo {
+    margin: 0;
+  }
+  .landing .header .logo .landingLogo {
+    height: 35px;
+    width: 35px;
+  }
+  .landing .header .logo .pup > div {
+    font-size: 1.3rem;
+  }
+  .landing .body-section {
+    height: 50vh;
+  }
+
+  .landing .body-section .imgLine {
+    display: none;
+  }
+  .landing .body-section .body .element .tagline h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .landing .body-section .elements {
+    background: none;
+    background-blend-mode: normal;
+    backdrop-filter: none;
+    border-radius: 40px;
+    border: none;
+  }
+  .landing .body-section .elements .buttons {
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .landing .body-section .body .element .tagline h2 {
+    font-size: 1rem;
+  }
+  .landing .body-section .body .element .buttons > button {
+    font-size: 1rem;
+  }
+}
