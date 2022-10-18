@@ -7,7 +7,6 @@ import Logo from "../Image/seal.png";
 import Line from "../Image/undraw_wait_in_line_o2aq.svg";
 // import NowServingtbl from "../Components/NowServingtbl";
 // import GenerateQLNModal from "../Components/GenerateQLNModal";
-// import GenerateQLN from "../Pages/GenerateQLN";
 
 const Landing = () => {
   // const [show, toShow] = useState(false);
