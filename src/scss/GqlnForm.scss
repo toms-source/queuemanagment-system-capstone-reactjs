@@ -1,0 +1,80 @@
+@use "./util//var.scss" as a;
+@import "../scss/Tophero.scss";
+
+.Generateqln {
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 95vh;
+    width: 100%;
+    .title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      padding: 20px;
+    }
+    .body {
+      width: 100%;
+      display: flex;
+      .GenerateQLNModalfrm {
+        align-items: center;
+        font-size: 1.5rem;
+        padding: 20px;
+        margin: auto;
+        > div {
+          margin: 20px;
+          input,
+          select {
+            margin-top: 5px;
+            width: 435px;
+            height: 35px;
+            border: 1px solid rgb(153, 153, 153);
+            border-radius: 10px;
+            font-size: 1.2rem;
+            padding: 0 5px;
+          }
+          input {
+            &:focus {
+              outline: none !important;
+              border: none;
+              box-shadow: 0 0 10px a.$primaryColor;
+            }
+          }
+          label {
+            width: 200px;
+            display: inline-block;
+          }
+        }
+        .generateQLNbtn {
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          gap: 10px;
+          height: 120px;
+          border-top: 1px solid rgb(160, 27, 27);
+          > button {
+            padding: 10px 40px;
+            border-radius: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+          }
+          .cancel {
+            background-color: transparent;
+            border: 1px solid a.$primaryColor;
+          }
+          .submit {
+            background-color: a.$primaryColor;
+            color: a.$white;
+            border: none;
+          }
+        }
+      }
+    }
+  }
+
+  .req {
+    color: red;
+  }
+}

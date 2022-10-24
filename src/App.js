@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 
-import "./Css/App.css";
+// import "./Css/App.css";
+import "./scss/App.scss";
 import Landing from "./Pages/Landing";
 import AdminLogin from "./Pages/AdminLogin";
 import MainDB from "./Pages/MainDB";

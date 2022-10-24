@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@300;400;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.landing .wrapper .access {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+}
+.landing .wrapper .access .admin {
+  font-size: 3rem;
+  color: #800000;
+}
+.landing .wrapper .access .admin:hover {
+  color: #a70000;
+}
+.landing .wrapper .content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100%;
+}
+.landing .wrapper .content::before {
+  content: "";
+  position: absolute;
+  background: #ffd700;
+  width: 61%;
+  height: 100%;
+  -webkit-clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
+          clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
+}
+.landing .wrapper .content .bgPup {
+  width: 60%;
+  background: url(../Image/pupsmbbg.jpg) center no-repeat;
+  background-size: cover;
+  -webkit-clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
+          clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
+}
+.landing .wrapper .content .buttons {
+  position: relative;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 400px;
+  padding: 50px;
+  border-radius: 15px;
+  background-color: rgb(240, 240, 240);
+  box-shadow: 7.7px 9.7px 12.2px rgba(0, 0, 0, 0.056), 15px 19px 25px rgba(0, 0, 0, 0.056);
+  gap: 20px;
+}
+.landing .wrapper .content .buttons > button {
+  justify-content: center;
+  display: flex;
+  width: 400px;
+  border: none;
+  font-weight: 300;
+  font-size: 1.4rem;
+  border-radius: 15px;
+  padding: 10px 15px;
+  background-color: #800000;
+  color: white;
+  cursor: pointer;
+}
+.landing .wrapper .content .buttons > button:hover {
+  background-color: #a70000;
+}
+.landing .wrapper .content .buttons .floatingLogo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.landing .wrapper .content .buttons .floatingLogo img {
+  height: 100px;
+  width: 100px;
+}
+.landing .wrapper .content .buttons::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  height: 120px;
+  width: 120px;
+  border-radius: 60px;
+  background: rgb(255, 255, 255);
+}
+.landing .wrapper .tables {
+  height: 100vh;
+}
+.landing .tables {
+  background: rgb(240, 240, 240);
+}
+.landing .tables h2 {
+  margin: 10px 0;
+  padding: 10px 20px;
+  text-align: center;
+  color: #ffd700;
+  background-color: rgb(240, 240, 240);
+}
+.Generateqln .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 95vh;
+  width: 100%;
+}
+.Generateqln .content .title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 20px;
+}
+.Generateqln .content .body {
+  width: 100%;
+  display: flex;
+}
+.Generateqln .content .body .GenerateQLNModalfrm {
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 20px;
+  margin: auto;
+}
+.Generateqln .content .body .GenerateQLNModalfrm > div {
+  margin: 20px;
+}
+.Generateqln .content .body .GenerateQLNModalfrm > div input,
+.Generateqln .content .body .GenerateQLNModalfrm > div select {
+  margin-top: 5px;
+  width: 435px;
+  height: 35px;
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 0 5px;
+}
+.Generateqln .content .body .GenerateQLNModalfrm > div input:focus {
+  outline: none !important;
+  border: none;
+  box-shadow: 0 0 10px #800000;
+}
+.Generateqln .content .body .GenerateQLNModalfrm > div label {
+  width: 200px;
+  display: inline-block;
+}
+.Generateqln .content .body .GenerateQLNModalfrm .generateQLNbtn {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  height: 120px;
+  border-top: 1px solid rgb(160, 27, 27);
+}
+.Generateqln .content .body .GenerateQLNModalfrm .generateQLNbtn > button {
+  padding: 10px 40px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.Generateqln .content .body .GenerateQLNModalfrm .generateQLNbtn .cancel {
+  background-color: transparent;
+  border: 1px solid #800000;
+}
+.Generateqln .content .body .GenerateQLNModalfrm .generateQLNbtn .submit {
+  background-color: #800000;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+.Generateqln .headings {
+  width: 100%;
+  height: 5vh;
+  background-color: #800000;
+}
+.Generateqln .req {
+  color: red;
+}

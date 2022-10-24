@@ -1,0 +1,97 @@
+.wrapper .background {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100%;
+}
+.wrapper .background::before {
+  content: "";
+  position: absolute;
+  background: #ffd700;
+  width: 100%;
+  height: 110px;
+  -webkit-clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+          clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+}
+.wrapper .background .overlap {
+  width: 100%;
+  height: 100px;
+  background: url(../Image/pupsmbbg.jpg) center no-repeat;
+  background-size: cover;
+  -webkit-clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+          clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+}
+
+.Generateqln .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 95vh;
+  width: 100%;
+}
+.Generateqln .content .title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 20px;
+}
+.Generateqln .content .body {
+  width: 100%;
+  display: flex;
+}
+.Generateqln .content .body .GenerateQLNModalfrm {
+  align-items: center;
+  font-size: 1.5rem;
+  padding: 20px;
+  margin: auto;
+}
+.Generateqln .content .body .GenerateQLNModalfrm > div {
+  margin: 20px;
+}
+.Generateqln .content .body .GenerateQLNModalfrm > div input,
+.Generateqln .content .body .GenerateQLNModalfrm > div select {
+  margin-top: 5px;
+  width: 435px;
+  height: 35px;
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 0 5px;
+}
+.Generateqln .content .body .GenerateQLNModalfrm > div input:focus {
+  outline: none !important;
+  border: none;
+  box-shadow: 0 0 10px #800000;
+}
+.Generateqln .content .body .GenerateQLNModalfrm > div label {
+  width: 200px;
+  display: inline-block;
+}
+.Generateqln .content .body .GenerateQLNModalfrm .generateQLNbtn {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  height: 120px;
+  border-top: 1px solid rgb(160, 27, 27);
+}
+.Generateqln .content .body .GenerateQLNModalfrm .generateQLNbtn > button {
+  padding: 10px 40px;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.Generateqln .content .body .GenerateQLNModalfrm .generateQLNbtn .cancel {
+  background-color: transparent;
+  border: 1px solid #800000;
+}
+.Generateqln .content .body .GenerateQLNModalfrm .generateQLNbtn .submit {
+  background-color: #800000;
+  color: rgb(255, 255, 255);
+  border: none;
+}
+.Generateqln .req {
+  color: red;
+}

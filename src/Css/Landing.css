@@ -66,6 +66,12 @@
   align-items: center;
   height: inherit;
 }
+.landing .body-section .table {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: inherit;
+}
 .landing .body-section .body .element .buttons {
   display: flex;
   justify-content: center;

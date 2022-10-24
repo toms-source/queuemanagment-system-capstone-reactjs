@@ -1,0 +1,27 @@
+.queueline-users {
+  display: flex;
+  flex-direction: column;
+}
+.queueline-users table {
+  margin: auto;
+  /* background-color: gray; */
+  text-align: center;
+  width: 80%;
+  height: 500px;
+}
+
+.queueline-users table tbody {
+  font-size: 1.5rem;
+}
+.queueline-users table tbody tr:nth-child(even) {
+  background-color: #e4e4e4;
+}
+.qlinetbl th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #800000;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}

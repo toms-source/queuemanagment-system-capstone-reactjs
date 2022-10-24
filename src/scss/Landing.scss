@@ -1,0 +1,224 @@
+@use "./util/var.scss" as a;
+.landing {
+  .wrapper {
+    .access {
+      position: absolute;
+      top: 20px;
+      right: 50px;
+      .admin {
+        font-size: 3rem;
+        color: a.$primaryColor;
+        &:hover {
+          color: a.$primaryHover;
+        }
+      }
+    }
+    .content {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      height: 100vh;
+      width: 100%;
+      &::before {
+        content: "";
+        position: absolute;
+        background: a.$secondaryColor;
+        width: 61%;
+        height: 100%;
+        clip-path: a.$toRightClip;
+      }
+
+      .bgPup {
+        width: 60%;
+        background: url(../Image/pupsmbbg.jpg) center no-repeat;
+        background-size: cover;
+        clip-path: a.$toRightClip;
+      }
+      .buttons {
+        position: relative;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        height: 400px;
+        padding: 50px;
+        border-radius: 15px;
+        background-color: a.$primaryBackground;
+        box-shadow: 7.7px 9.7px 12.2px a.$primaryShadow,
+          15px 19px 25px a.$primaryShadow;
+
+        gap: 20px;
+        > button {
+          justify-content: center;
+          display: flex;
+          width: 400px;
+          border: none;
+          font-weight: 300;
+          font-size: 1.4rem;
+          border-radius: 15px;
+          padding: 10px 15px;
+          background-color: a.$primaryColor;
+          color: white;
+          cursor: pointer;
+          &:hover {
+            background-color: a.$primaryHover;
+          }
+        }
+        .floatingLogo {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          img {
+            height: 100px;
+            width: 100px;
+          }
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          top: -60px;
+          height: 120px;
+          width: 120px;
+          border-radius: 60px;
+          background: a.$white;
+        }
+      }
+    }
+    .tables {
+      height: 100vh;
+    }
+  }
+  .tables {
+    background: a.$primaryBackground;
+    h2 {
+      margin: 10px 0;
+      padding: 10px 20px;
+      text-align: center;
+      color: a.$secondaryColor;
+      background-color: a.$primaryBackground;
+    }
+  }
+
+  @media only screen and (max-width: 480px) and (min-width: 320px) {
+    .wrapper {
+      .access {
+        display: none;
+      }
+      .content {
+        justify-content: flex-start;
+        height: 65vh;
+        &::before {
+          width: 100%;
+          height: 80px;
+          clip-path: a.$topClip;
+        }
+        .bgPup {
+          width: 100%;
+          height: 70px;
+          clip-path: a.$topClip;
+        }
+        .buttons {
+          height: 180px;
+          padding: 10px;
+          border-radius: 12px;
+          justify-content: flex-end;
+          gap: 8px;
+          > button {
+            width: 230px;
+            font-size: 12px;
+            border-radius: 10px;
+            padding: 10px 15px;
+          }
+          h2 {
+            font-size: 12px;
+          }
+          .floatingLogo {
+            top: 0;
+            img {
+              height: 70px;
+              width: 70px;
+            }
+          }
+          &::before {
+            top: -44px;
+            height: 80px;
+            width: 80px;
+            border-radius: 60px;
+            background: a.$white;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 768px) and (min-width: 481px) {
+    .wrapper {
+      .access {
+        display: none;
+      }
+      .content {
+        justify-content: space-evenly;
+        height: 90vh;
+        &::before {
+          width: 100%;
+          height: 100px;
+          clip-path: a.$topClip;
+        }
+        .bgPup {
+          width: 100%;
+          height: 90px;
+          clip-path: a.$topClip;
+        }
+        .buttons {
+          height: 300px;
+          padding: 40px;
+          border-radius: 12px;
+          gap: 15px;
+          > button {
+            width: 280px;
+            font-size: 1rem;
+            border-radius: 15px;
+            padding: 10px 15px;
+          }
+          h2 {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 1292px) and (min-width: 769px) {
+    .wrapper {
+      .access {
+        display: none;
+      }
+      .content {
+        justify-content: space-evenly;
+        height: 90vh;
+        &::before {
+          width: 100%;
+          height: 120px;
+          clip-path: a.$topClip;
+        }
+        .bgPup {
+          width: 100%;
+          height: 110px;
+          clip-path: a.$topClip;
+        }
+        .buttons {
+          height: 330px;
+          padding: 35px;
+          border-radius: 12px;
+          gap: 15px;
+          > button {
+            width: 350px;
+            font-size: 1.2rem;
+            border-radius: 15px;
+            padding: 10px 15px;
+          }
+        }
+      }
+    }
+  }
+}
