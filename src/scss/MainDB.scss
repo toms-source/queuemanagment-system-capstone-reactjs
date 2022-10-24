@@ -1,0 +1,12 @@
+@use "./util/var.scss" as a;
+@import "./AdminSignOutbtn.scss";
+.maindb {
+  display: flex;
+  .mainContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+}
