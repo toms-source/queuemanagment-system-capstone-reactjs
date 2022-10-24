@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-import "../Css/AdminLogin.css";
+// import "../Css/AdminLogin.css";
 import Logo from "../Image/seal.png";
 
 const AdminLogin = () => {
@@ -15,19 +15,19 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="adminLogin-content">
-      <div className="admnleft">
+    <div className="adminLogin">
+      <div className="hero">
         <div>
           <motion.img
             src={Logo}
             alt=""
-            className="adminLoginLogo"
+            className="Logo"
             initial={{ rotate: 0 }}
             animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 15 }}
           />
         </div>
-        <div className="adminLoginTitle">
+        <div className="title">
           <div>queue</div>
           <div>management</div>
           <div>system</div>
@@ -44,10 +44,10 @@ const AdminLogin = () => {
         </div>
       </div>
 
-      <div className="admnright">
-        <form action="" className="admnLoginfrm">
+      <div className="side">
+        <form action="" className="newform">
           <h3>log in</h3>
-          <div className="admintxtfields">
+          <div className="txtfields">
             <input
               type="text"
               placeholder="Username"
@@ -75,7 +75,7 @@ const AdminLogin = () => {
               Cancel
             </motion.button>
             <motion.button
-              type="button" //yung type gagawin ko muna type="button". Pero type=submit dapat yan
+              type="button"
               className="submit"
               id="submitbtn"
               onClick={mainDbAccess}

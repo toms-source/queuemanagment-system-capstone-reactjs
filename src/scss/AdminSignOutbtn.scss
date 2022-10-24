@@ -1,13 +1,13 @@
 @use "./util/var.scss" as a;
+@use "./mixins/var.scss" as b;
+
 .signout {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include b.flexCenter;
   position: absolute;
   bottom: 50px;
   right: 30px;
   font-size: 3rem;
-  color: white;
+  color: a.$white;
   background-color: a.$primaryColor;
   border-radius: 80px;
   &:hover {

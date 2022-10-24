@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
-import "../Css/Sidepanel.css";
 import Logo from "../Image/seal.png";
 import { BsMegaphone } from "react-icons/bs";
 import { MdOutlineScreenShare } from "react-icons/md";
 import { AiOutlineHistory, AiOutlineDatabase } from "react-icons/ai";
-// import { VscSignOut } from "react-icons/vsc";
 
 const Sidepanel = () => {
   const shareAView = () => {
@@ -14,7 +12,7 @@ const Sidepanel = () => {
   return (
     <div className="panel">
       <div className="content">
-        <div className="header-sec">
+        <div className="header">
           <h1 className="logo">
             <img src={Logo} alt="" className="sidepanelLogo" />
           </h1>
@@ -22,7 +20,7 @@ const Sidepanel = () => {
 
         {/* navigations */}
         <div className="navigate">
-          <div className="adminDb link">
+          <div className="dashboard link">
             <Link to={"/main"} className="linktxt">
               <AiOutlineDatabase className="navicon" />
 
@@ -30,7 +28,7 @@ const Sidepanel = () => {
             </Link>
           </div>
 
-          <div className="adminAnnouncement link">
+          <div className="Announcement link">
             <Link to={"/announcement"} className="linktxt">
               <BsMegaphone className="navicon" />
 
@@ -38,7 +36,7 @@ const Sidepanel = () => {
             </Link>
           </div>
 
-          <div className="adminHistory link">
+          <div className="History link">
             <Link to={"/history"} className="linktxt">
               <AiOutlineHistory className="navicon" />
 
@@ -46,22 +44,13 @@ const Sidepanel = () => {
             </Link>
           </div>
 
-          <div className="adminShareAView link">
+          <div className="ShareAView link">
             <Link onClick={shareAView} className="linktxt">
               <MdOutlineScreenShare className="navicon" />
 
               <label className="navtxt">Share a View</label>
             </Link>
           </div>
-
-          {/* <div className="adminSignOut link">
-            <Link to={"/"} className="linktxt">
-              <abbr title="Sign Out">
-                <VscSignOut className="navicon" />
-              </abbr>
-              <label className="navtxt">Sign Out</label>
-            </Link>
-          </div> */}
         </div>
       </div>
     </div>

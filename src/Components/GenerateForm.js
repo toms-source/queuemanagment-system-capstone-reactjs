@@ -10,15 +10,19 @@ const GenerateForm = () => {
   const qln = () => {
     navigate("/generate-qln-success");
   };
+
+  const colorReq = {
+    color: "red",
+  };
   return (
     <div className="form">
       <h1>Generate Queue Line number</h1>
       <form action="" className="newform">
-        <div className="input-transactions">
-          <label htmlFor="Transaction">
-            Transaction <span className="req">*</span>
+        <div className="transactions">
+          <label htmlFor="transaction">
+            Transaction <span style={colorReq}>*</span>
           </label>
-          <select name="transactions" id="transactions" required={require}>
+          <select name="transactions" id="transactions">
             <option value="a" disabled selected hidden>
               Head of Academic Transactions
             </option>
@@ -32,16 +36,16 @@ const GenerateForm = () => {
           </select>
         </div>
 
-        <div className="input-email">
+        <div className="email">
           <label htmlFor="Email" className="label">
-            Email<span className="req">*</span>
+            Email<span style={colorReq}>*</span>
           </label>
           <input type="email" required placeholder="Ex. Juan Cruz@yahoo.com" />
         </div>
 
         <div className="input-name">
           <label htmlFor="Name" className="label">
-            Name<span className="req">*</span>
+            Name<span style={colorReq}>*</span>
           </label>
           <input type="text" required placeholder="Ex. Juan Cruz" />
         </div>

@@ -1,8 +1,7 @@
-.adminLogin-content {
+.adminLogin {
   display: flex;
 }
-
-.admnleft {
+.adminLogin .hero {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,65 +10,55 @@
   width: 60%;
   height: 100vh;
 }
-
-.adminLoginLogo {
+.adminLogin .hero .Logo {
   height: 300px;
   width: 300px;
 }
-
-.adminLoginTitle {
+.adminLogin .hero .title {
   text-transform: uppercase;
   font-size: 40px;
   font-weight: 700;
-  color: white;
+  color: rgb(255, 255, 255);
 }
-
-.admnright {
+.adminLogin .side {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40%;
 }
-
-.admnLoginfrm {
-  border: 1px solid rgb(185, 185, 185);
+.adminLogin .side .newform {
+  border: 1px solid rgb(197, 197, 197);
   border-radius: 20px;
   padding: 20px 25px;
-  box-shadow: 7.7px 9.7px 12.2px rgba(0, 0, 0, 0.056),
-    15px 19px 25px rgba(0, 0, 0, 0.12);
+  box-shadow: 7.7px 9.7px 12.2px rgba(0, 0, 0, 0.056), 15px 19px 25px rgba(0, 0, 0, 0.12);
 }
-.admnLoginfrm h3 {
-  font-size: 32px;
+.adminLogin .side .newform h3 {
   text-align: center;
   text-transform: capitalize;
 }
-
-.admintxtfields > input {
+.adminLogin .side .newform .txtfields > input {
   display: block;
   font-weight: 400;
   font-size: 21px;
   height: 15px;
-  width: 250px;
-  border: 1px solid rgb(153, 153, 153);
+  width: 300px;
+  border: 1px solid rgb(197, 197, 197);
   border-radius: 10px;
   margin-top: 20px;
-  padding: 15px;
+  padding: 20px;
 }
-
-.admintxtfields input:focus {
+.adminLogin .side .newform .txtfields > input:focus {
   outline: none !important;
   border: none;
   box-shadow: 0 0 10px #800000;
 }
-
-.admnLoginfrm .btn {
+.adminLogin .side .btn {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
 }
-
-.admnLoginfrm .btn .cancel {
+.adminLogin .side .btn .cancel {
   padding: 10px 40px;
   border-radius: 10px;
   background-color: none;
@@ -78,16 +67,15 @@
   border: 1px solid #800000;
   cursor: pointer;
 }
-
-.admnLoginfrm .btn .submit {
+.adminLogin .side .btn .submit {
   padding: 10px 40px;
   background-color: #800000;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 15px;
   border-radius: 10px;
   border: none;
   cursor: pointer;
 }
-.admnLoginfrm .btn .submit:hover {
+.adminLogin .side .btn .submit:hover {
   background-color: #a70000;
 }
