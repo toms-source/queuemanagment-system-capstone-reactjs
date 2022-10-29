@@ -1,30 +1,39 @@
 import { Routes, Route } from "react-router-dom";
-
-// import "./Css/App.css";
 import "./scss/App.scss";
 import Landing from "./Pages/Landing";
+import Notfound from "./Pages/Notfound";
+
+// Components for Admin only
 import AdminLogin from "./Pages/AdminLogin";
 import MainDB from "./Pages/MainDB";
 import AnnouncementDB from "./Pages/AnnouncementDB";
 import ShareAViewDB from "./Pages/ShareAViewDB";
 import History from "./Pages/HistoryDB";
+
+// Components for CLient/Students only
 import GenerateQLN from "./Pages/GenerateQLN";
+import Transaction from "./Pages/Transaction";
 import Qln from "./Pages/Qln";
-function App() {
+
+const App = () => {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/generate-qln" element={<GenerateQLN />} />
-        <Route path="/generate-qln-success" element={<Qln />} />
+        <Route path="*" element={<Notfound />} />
+        {/* Routes for CLient/Students only */}
+        <Route path="/generateNumber" element={<GenerateQLN />} />
+        <Route path="/generateSuccess" element={<Qln />} />
+        <Route path="/transactions" element={<Transaction />} />
+        {/* Routes for Admin only */}
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/main" element={<MainDB />} />
         <Route path="/announcement" element={<AnnouncementDB />} />
-        <Route path="/share-a-view" element={<ShareAViewDB />} />
+        <Route path="/view" element={<ShareAViewDB />} />
         <Route path="/history" element={<History />} />
       </Routes>
     </div>
   );
-}
+};
 
 export default App;

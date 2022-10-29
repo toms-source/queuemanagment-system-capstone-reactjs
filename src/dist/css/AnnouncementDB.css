@@ -1,12 +1,41 @@
-.history {
+.announcement {
   display: flex;
 }
-.history .mainContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.announcement .announcementContent {
+  padding: 20px;
   width: 100%;
+}
+.announcement .announcementContent form textarea {
+  padding: 10px 20px;
+  width: 100%;
+  min-height: 100px;
+  max-height: 150px;
+  font-size: 1.3rem;
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.announcement .announcementContent form textarea:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 10px #800000;
+}
+.announcement .announcementContent form .button {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.announcement .announcementContent form .button button {
+  padding: 10px 40px;
+  background-color: #800000;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.announcement .announcementContent form .button button:hover {
+  background-color: #a70000;
 }
 
 .signout {

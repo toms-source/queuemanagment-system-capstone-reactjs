@@ -2,7 +2,7 @@
 @use "./mixins//var.scss" as b;
 @import "../scss/Tophero.scss";
 
-.form {
+.editForm {
   @include b.flexCenter;
   flex-direction: column;
   height: 85vh;

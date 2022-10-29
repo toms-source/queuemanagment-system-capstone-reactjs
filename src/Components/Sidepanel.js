@@ -6,7 +6,7 @@ import { AiOutlineHistory, AiOutlineDatabase } from "react-icons/ai";
 
 const Sidepanel = () => {
   const shareAView = () => {
-    window.open("/share-a-view");
+    window.open("/view");
   };
 
   return (

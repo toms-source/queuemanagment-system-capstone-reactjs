@@ -48,7 +48,7 @@
   padding: 20px;
 }
 .adminLogin .side .newform .txtfields > input:focus {
-  outline: none !important;
+  outline: none;
   border: none;
   box-shadow: 0 0 10px #800000;
 }

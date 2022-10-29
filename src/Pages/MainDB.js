@@ -4,7 +4,7 @@ import Signout from "../Components/AdminSignOutbtn";
 
 const MainDB = () => {
   return (
-    <div className="maindb">
+    <div className="main">
       <Sidepanel />
 
       <div className="mainContent">

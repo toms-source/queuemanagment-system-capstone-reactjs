@@ -1,7 +1,7 @@
 @use "./util/var.scss" as a;
 @use "./mixins//var.scss" as b;
-@import "./AdminSignOutbtn.scss";
-.maindb {
+
+.main {
   display: flex;
   .mainContent {
     @include b.flexCenter;
@@ -9,3 +9,6 @@
     width: 100%;
   }
 }
+
+@import "./AdminSignOutbtn.scss";
+@import "./Sidepanel.scss";

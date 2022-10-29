@@ -9,7 +9,10 @@ const Landing = () => {
     navigate("/admin");
   };
   const GenerateQLN = () => {
-    navigate("/generate-qln");
+    navigate("/generateNumber");
+  };
+  const transactions = () => {
+    navigate("/transactions");
   };
 
   return (
@@ -46,6 +49,7 @@ const Landing = () => {
             <motion.button
               type="button"
               className="transaction"
+              onClick={transactions}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >

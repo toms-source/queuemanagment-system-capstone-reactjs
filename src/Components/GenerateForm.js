@@ -8,7 +8,7 @@ const GenerateForm = () => {
     navigate("/");
   };
   const qln = () => {
-    navigate("/generate-qln-success");
+    navigate("/generateSuccess");
   };
 
   const colorReq = {
