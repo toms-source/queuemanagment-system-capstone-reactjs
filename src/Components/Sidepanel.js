@@ -5,9 +5,9 @@ import { MdOutlineScreenShare } from "react-icons/md";
 import { AiOutlineHistory, AiOutlineDatabase } from "react-icons/ai";
 
 const Sidepanel = () => {
-  const shareAView = () => {
-    window.open("/view");
-  };
+  // const shareAView = () => {
+  //   window.open("/view");
+  // };
 
   return (
     <div className="panel">
@@ -45,11 +45,17 @@ const Sidepanel = () => {
           </div>
 
           <div className="ShareAView link">
-            <Link onClick={shareAView} className="linktxt">
+            <a
+              href="https://google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <MdOutlineScreenShare className="navicon" />
 
               <label className="navtxt">Share a View</label>
-            </Link>
+            </a>
+            {/* </Link> */}
+            {/* onClick={shareAView} */}
           </div>
         </div>
       </div>
