@@ -45,8 +45,8 @@ const Sidepanel = () => {
           </div>
 
           <div className="ShareAView link">
-            <Link
-              to={"/view"}
+            <a
+              href="https://new-reg-app.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
               className="linktxt"
@@ -54,7 +54,7 @@ const Sidepanel = () => {
               <MdOutlineScreenShare className="navicon" />
 
               <label className="navtxt">Share a View</label>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
