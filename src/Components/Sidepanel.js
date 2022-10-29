@@ -46,7 +46,7 @@ const Sidepanel = () => {
 
           <div className="ShareAView link">
             <a
-              href="https://new-reg-app.netlify.app"
+              href="https://display-line-pupsmbqms.netlify.app"
               target="_blank"
               rel="noopener noreferrer"
               className="linktxt"
