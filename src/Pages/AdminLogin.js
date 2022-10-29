@@ -35,11 +35,10 @@ const AdminLogin = () => {
             style={{
               fontSize: "20px",
               fontWeight: "300",
-              marginLeft: "40px",
               textTransform: "lowercase",
             }}
           >
-            admin
+            Office of Academic Head Program
           </div>
         </div>
       </div>
