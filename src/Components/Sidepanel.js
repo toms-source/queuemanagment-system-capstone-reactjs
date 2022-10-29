@@ -45,11 +45,7 @@ const Sidepanel = () => {
           </div>
 
           <div className="ShareAView link">
-            <a
-              href="https://google.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="/view" target="_blank" rel="noopener noreferrer">
               <MdOutlineScreenShare className="navicon" />
 
               <label className="navtxt">Share a View</label>
