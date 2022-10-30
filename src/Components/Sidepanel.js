@@ -45,6 +45,7 @@ const Sidepanel = () => {
           </div>
 
           <div className="ShareAView link">
+            {/* pre ayaw gumana nung una pag hinost ko na eh hahaha eto yung solution na naisip ko */}
             <a
               href="https://display-line-pupsmbqms.netlify.app"
               target="_blank"
