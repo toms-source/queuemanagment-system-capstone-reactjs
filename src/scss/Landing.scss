@@ -49,7 +49,7 @@
             > div {
               @include b.flexCenter;
               height: inherit;
-              width: 80%;
+              width: 90%;
               > button {
                 border: none;
                 font-weight: 300;
@@ -65,64 +65,10 @@
           }
         }
       }
-
-      // .buttons {
-      //   position: relative;
-
-      //   display: flex;
-      //   align-items: center;
-      //   flex-direction: column;
-      //   justify-content: center;
-      //   height: 400px;
-      //   padding: 50px;
-      //   border-radius: 15px;
-      //   background-color: a.$primaryBackground;
-      //   box-shadow: 7.7px 9.7px 12.2px a.$primaryShadow,
-      //     15px 19px 25px a.$primaryShadow;
-
-      //   gap: 20px;
-      //   > button {
-      //     justify-content: center;
-      //     display: flex;
-      //
-      //     border: none;
-      //     font-weight: 300;
-      //     font-size: 1.4rem;
-      //     border-radius: 15px;
-      //
-      //     background-color: a.$primaryColor;
-      //     color: white;
-      //     cursor: pointer;
-      //     &:hover {
-      //       background-color: a.$primaryHover;
-      //     }
-      //   }
-      //   .floatingLogo {
-      //     position: absolute;
-      //     top: 0;
-      //     left: 50%;
-      //     transform: translate(-50%, -50%);
-      //     img {
-      //       height: 100px;
-      //       width: 100px;
-      //     }
-      //   }
-      //   &::before {
-      //     content: "";
-      //     position: absolute;
-      //     top: -60px;
-      //     height: 120px;
-      //     width: 120px;
-      //     border-radius: 60px;
-      //     background: a.$white;
-      //   }
-      // }
-    }
-    .tables {
-      height: 100vh;
     }
   }
   .tables {
+    height: 100vh;
     background: a.$primaryBackground;
     h2 {
       margin: 10px 0;
@@ -130,6 +76,214 @@
       text-align: center;
       color: a.$secondaryColor;
       background-color: a.$primaryBackground;
+    }
+  }
+
+  // media querries
+  @media only screen and (max-width: 1280px) and (min-width: 1230px) {
+    .wrapper {
+      .content {
+        .card {
+          .elements {
+            h1 {
+              font-size: 1.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 1231px) and (min-width: 935px) {
+    .wrapper {
+      .content {
+        .card {
+          padding: 15px;
+          height: 50%;
+          width: 48%;
+
+          .elements {
+            width: 100%;
+            h1 {
+              font-size: 1.5rem;
+            }
+            .buttons {
+              padding: 30px 0;
+              gap: 15px;
+
+              > div {
+                width: 100%;
+                > button {
+                  border: none;
+                  font-weight: 300;
+                  font-size: 1.3rem;
+                  border-radius: 15px;
+                  padding: 10px 15px;
+                  width: inherit;
+                  background-color: a.$primaryColor;
+                  color: white;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 937px) and (min-width: 550px) {
+    .wrapper {
+      .access {
+        .admin {
+          display: none;
+        }
+      }
+      .content {
+        .card {
+          width: 80%;
+          .elements {
+            h1 {
+              font-size: 1.4rem;
+            }
+            .buttons {
+              > div {
+                width: 100%;
+                > button {
+                  border: none;
+                  font-weight: 300;
+                  font-size: 1.2rem;
+                  border-radius: 15px;
+                  padding: 10px 15px;
+                  width: inherit;
+                  background-color: a.$primaryColor;
+                  color: white;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 549px) and (min-width: 485px) {
+    .wrapper {
+      .access {
+        .admin {
+          display: none;
+        }
+      }
+      .content {
+        .card {
+          width: 85%;
+          .elements {
+            h1 {
+              font-size: 1.3rem;
+            }
+            .buttons {
+              > div {
+                width: 100%;
+                > button {
+                  border: none;
+                  font-weight: 300;
+                  font-size: 1.2rem;
+                  border-radius: 15px;
+                  padding: 10px 15px;
+                  width: inherit;
+                  background-color: a.$primaryColor;
+                  color: white;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 484px) and (min-width: 365px) {
+    .wrapper {
+      .access {
+        .admin {
+          display: none;
+        }
+      }
+      .content {
+        .card {
+          width: 90%;
+          .elements {
+            h1 {
+              font-size: 1rem;
+            }
+            .buttons {
+              > div {
+                width: 100%;
+                > button {
+                  font-size: 1rem;
+                  border-radius: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 364px) and (min-width: 334px) {
+    .wrapper {
+      .access {
+        .admin {
+          display: none;
+        }
+      }
+      .content {
+        .card {
+          width: 90%;
+          .elements {
+            h1 {
+              font-size: 0.9rem;
+            }
+            .buttons {
+              gap: 10px;
+              > div {
+                width: 100%;
+                > button {
+                  font-size: 0.9rem;
+                  border-radius: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 333px) and (min-width: 320px) {
+    .wrapper {
+      .access {
+        .admin {
+          display: none;
+        }
+      }
+      .content {
+        .card {
+          width: 90%;
+          .elements {
+            h1 {
+              font-size: 13px;
+            }
+            .buttons {
+              gap: 10px;
+              > div {
+                width: 100%;
+                > button {
+                  font-size: 0.8rem;
+                  border-radius: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

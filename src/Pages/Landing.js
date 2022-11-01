@@ -17,7 +17,7 @@ const Landing = () => {
   };
 
   const viewTables = {
-    color: "Blue",
+    color: "#ffd700",
     textDecoration: "none",
   };
   return (
