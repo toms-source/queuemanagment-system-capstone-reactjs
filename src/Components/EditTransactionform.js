@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { GoSearch } from "react-icons/go";
 
 const EditTransactionform = () => {
   const navigate = useNavigate();
@@ -11,11 +12,7 @@ const EditTransactionform = () => {
   const colorReq = {
     color: "red",
   };
-  const search = {
-    width: "30px",
-    margin: "10px",
-    fontSize: "3px",
-  };
+
   return (
     <div>
       <div className="editForm">
@@ -26,13 +23,12 @@ const EditTransactionform = () => {
               Email<span style={colorReq}>*</span>
             </label>
             <input
-              type="search"
+              type="text"
+              className="txtemail"
               required
               placeholder="Ex. Juan Cruz@yahoo.com"
             />
-            <span>
-              <input type="submit" name="search" id="search" style={search} />
-            </span>
+            {/* <GoSearch className="search" /> */}
           </div>
           <div className="transactions">
             <label htmlFor="transaction">
