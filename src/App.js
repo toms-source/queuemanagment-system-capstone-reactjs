@@ -7,7 +7,6 @@ import Notfound from "./Pages/Notfound";
 import AdminLogin from "./Pages/AdminLogin";
 import MainDB from "./Pages/MainDB";
 import AnnouncementDB from "./Pages/AnnouncementDB";
-import ShareAViewDB from "./Pages/ShareAViewDB";
 import History from "./Pages/HistoryDB";
 
 // Components for CLient/Students only
@@ -29,7 +28,6 @@ const App = () => {
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/main" element={<MainDB />} />
         <Route path="/announcement" element={<AnnouncementDB />} />
-        <Route path="/view" element={<ShareAViewDB />} />
         <Route path="/history" element={<History />} />
       </Routes>
     </div>

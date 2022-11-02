@@ -1,6 +1,5 @@
 import React from "react";
 import Sidepanel from "../Components/Sidepanel";
-import "../Css/AnnouncementDB.css";
 import Signout from "../Components/AdminSignOutbtn";
 import { motion } from "framer-motion";
 
