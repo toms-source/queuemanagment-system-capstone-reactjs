@@ -39,6 +39,7 @@
           width: 100%;
           h1 {
             @include b.flexCenter;
+            font-weight: 700;
           }
           .buttons {
             @include b.flexCenter;
@@ -69,13 +70,20 @@
   }
   .tables {
     height: 100vh;
-    background: a.$primaryBackground;
+    // background: a.$primaryBackground;
+    .nowServing,
+    .queueLandin {
+      padding: 20px 50px;
+      h2 {
+        color: a.$primaryColor;
+      }
+    }
     h2 {
       margin: 10px 0;
       padding: 10px 20px;
       text-align: center;
       color: a.$secondaryColor;
-      background-color: a.$primaryBackground;
+      // background-color: a.$primaryBackground;
     }
   }
 

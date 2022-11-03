@@ -41,6 +41,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 700;
 }
 .landing .wrapper .content .card .elements .buttons {
   display: flex;
@@ -70,14 +71,20 @@
 }
 .landing .tables {
   height: 100vh;
-  background: rgb(240, 240, 240);
+}
+.landing .tables .nowServing,
+.landing .tables .queueLandin {
+  padding: 20px 50px;
+}
+.landing .tables .nowServing h2,
+.landing .tables .queueLandin h2 {
+  color: #800000;
 }
 .landing .tables h2 {
   margin: 10px 0;
   padding: 10px 20px;
   text-align: center;
   color: #ffd700;
-  background-color: rgb(240, 240, 240);
 }
 @media only screen and (max-width: 1280px) and (min-width: 1230px) {
   .landing .wrapper .content .card .elements h1 {

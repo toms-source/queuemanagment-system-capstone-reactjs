@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaUserLock as AdminPortal } from "react-icons/fa";
+import { NowServing } from "../tables/NowServing";
+import { QueueLanding } from "../tables/QueueLanding";
 
 import Tophero from "../Components/Tophero";
 
@@ -75,6 +77,14 @@ const Landing = () => {
         <section id="tables">
           <div className="tables">
             <h2>QUEUELINE HERE</h2>
+            <div className="nowServing">
+              <h2>Now Serving...</h2>
+              <NowServing />
+            </div>
+            <div className="queueLandin">
+              <h2>Queue</h2>
+              <QueueLanding />
+            </div>
           </div>
         </section>
       </div>
