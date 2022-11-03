@@ -40,6 +40,7 @@
           h1 {
             @include b.flexCenter;
             font-weight: 700;
+            font-size: 2rem;
           }
           .buttons {
             @include b.flexCenter;
