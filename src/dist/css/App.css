@@ -6,12 +6,32 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+html::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f5f5f5;
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, rgb(172, 0, 0)), color-stop(0.72, rgb(134, 0, 0)), color-stop(0.86, rgb(99, 3, 0)));
+}
+
 .landing .wrapper .access {
-  position: absolute;
-  top: 20px;
-  right: 50px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
 }
 .landing .wrapper .access .admin {
+  position: -webkit-sticky;
+  position: sticky;
   font-size: 3rem;
   color: #800000;
 }
@@ -20,80 +40,62 @@
 }
 .landing .wrapper .content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  height: 100vh;
+  height: 85vh;
   width: 100%;
 }
-.landing .wrapper .content::before {
-  content: "";
+.landing .wrapper .content .card {
   position: absolute;
-  background: #ffd700;
-  width: 61%;
-  height: 100%;
-  -webkit-clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
-          clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
-}
-.landing .wrapper .content .bgPup {
-  width: 60%;
-  background: url(../Image/pupsmbbg.jpg) center no-repeat;
-  background-size: cover;
-  -webkit-clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
-          clip-path: polygon(0 0, 75% 0%, 100% 50%, 75% 100%, 0 100%, 0% 50%);
-}
-.landing .wrapper .content .buttons {
-  position: relative;
-  margin: auto;
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
-  height: 400px;
-  padding: 50px;
+  padding: 25px;
+  height: 50%;
+  width: 50%;
   border-radius: 15px;
   background-color: rgb(240, 240, 240);
   box-shadow: 7.7px 9.7px 12.2px rgba(0, 0, 0, 0.056), 15px 19px 25px rgba(0, 0, 0, 0.056);
+}
+.landing .wrapper .content .card .elements {
+  position: relative;
+  width: 100%;
+}
+.landing .wrapper .content .card .elements h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landing .wrapper .content .card .elements .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0;
   gap: 20px;
 }
-.landing .wrapper .content .buttons > button {
-  justify-content: center;
+.landing .wrapper .content .card .elements .buttons > div {
   display: flex;
-  width: 400px;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  width: 90%;
+}
+.landing .wrapper .content .card .elements .buttons > div > button {
   border: none;
   font-weight: 300;
   font-size: 1.4rem;
   border-radius: 15px;
   padding: 10px 15px;
+  width: inherit;
   background-color: #800000;
   color: white;
   cursor: pointer;
 }
-.landing .wrapper .content .buttons > button:hover {
-  background-color: #a70000;
-}
-.landing .wrapper .content .buttons .floatingLogo {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.landing .wrapper .content .buttons .floatingLogo img {
-  height: 100px;
-  width: 100px;
-}
-.landing .wrapper .content .buttons::before {
-  content: "";
-  position: absolute;
-  top: -60px;
-  height: 120px;
-  width: 120px;
-  border-radius: 60px;
-  background: rgb(255, 255, 255);
-}
-.landing .wrapper .tables {
-  height: 100vh;
-}
 .landing .tables {
+  height: 100vh;
   background: rgb(240, 240, 240);
 }
 .landing .tables h2 {
@@ -103,124 +105,150 @@
   color: #ffd700;
   background-color: rgb(240, 240, 240);
 }
-@media only screen and (max-width: 480px) and (min-width: 320px) {
-  .landing .wrapper .access {
-    display: none;
-  }
-  .landing .wrapper .content {
-    justify-content: flex-start;
-    height: 65vh;
-  }
-  .landing .wrapper .content::before {
-    width: 100%;
-    height: 15vh;
-    -webkit-clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
-            clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
-  }
-  .landing .wrapper .content .bgPup {
-    width: 100%;
-    height: 13vh;
-    -webkit-clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
-            clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
-  }
-  .landing .wrapper .content .buttons {
-    height: 180px;
-    padding: 10px;
-    border-radius: 12px;
-    justify-content: flex-end;
-    gap: 8px;
-  }
-  .landing .wrapper .content .buttons > button {
-    width: 230px;
-    font-size: 12px;
-    border-radius: 10px;
-    padding: 10px 15px;
-  }
-  .landing .wrapper .content .buttons h2 {
-    font-size: 12px;
-  }
-  .landing .wrapper .content .buttons .floatingLogo {
-    top: 0;
-  }
-  .landing .wrapper .content .buttons .floatingLogo img {
-    height: 70px;
-    width: 70px;
-  }
-  .landing .wrapper .content .buttons::before {
-    top: -44px;
-    height: 80px;
-    width: 80px;
-    border-radius: 60px;
-    background: rgb(255, 255, 255);
+@media only screen and (max-width: 1280px) and (min-width: 1230px) {
+  .landing .wrapper .content .card .elements h1 {
+    font-size: 1.8rem;
   }
 }
-@media only screen and (max-width: 768px) and (min-width: 481px) {
-  .landing .wrapper .access {
-    display: none;
+@media only screen and (max-width: 1231px) and (min-width: 935px) {
+  .landing .wrapper .content .card {
+    padding: 15px;
+    height: 50%;
+    width: 48%;
   }
-  .landing .wrapper .content {
-    justify-content: space-evenly;
-    height: 90vh;
-  }
-  .landing .wrapper .content::before {
+  .landing .wrapper .content .card .elements {
     width: 100%;
-    height: 100px;
-    -webkit-clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
-            clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
   }
-  .landing .wrapper .content .bgPup {
-    width: 100%;
-    height: 90px;
-    -webkit-clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
-            clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
+  .landing .wrapper .content .card .elements h1 {
+    font-size: 1.5rem;
   }
-  .landing .wrapper .content .buttons {
-    height: 300px;
-    padding: 40px;
-    border-radius: 12px;
+  .landing .wrapper .content .card .elements .buttons {
+    padding: 30px 0;
     gap: 15px;
   }
-  .landing .wrapper .content .buttons > button {
-    width: 280px;
-    font-size: 1rem;
+  .landing .wrapper .content .card .elements .buttons > div {
+    width: 100%;
+  }
+  .landing .wrapper .content .card .elements .buttons > div > button {
+    border: none;
+    font-weight: 300;
+    font-size: 1.3rem;
     border-radius: 15px;
     padding: 10px 15px;
-  }
-  .landing .wrapper .content .buttons h2 {
-    font-size: 1rem;
+    width: inherit;
+    background-color: #800000;
+    color: white;
+    cursor: pointer;
   }
 }
-@media only screen and (max-width: 1292px) and (min-width: 769px) {
-  .landing .wrapper .access {
+@media only screen and (max-width: 937px) and (min-width: 550px) {
+  .landing .wrapper .access .admin {
     display: none;
   }
-  .landing .wrapper .content {
-    justify-content: space-evenly;
-    height: 90vh;
+  .landing .wrapper .content .card {
+    width: 80%;
   }
-  .landing .wrapper .content::before {
+  .landing .wrapper .content .card .elements h1 {
+    font-size: 1.4rem;
+  }
+  .landing .wrapper .content .card .elements .buttons > div {
     width: 100%;
-    height: 120px;
-    -webkit-clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
-            clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
   }
-  .landing .wrapper .content .bgPup {
-    width: 100%;
-    height: 110px;
-    -webkit-clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
-            clip-path: polygon(50% 100%, 100% 50%, 100% 0, 0 0, 0 50%);
-  }
-  .landing .wrapper .content .buttons {
-    height: 330px;
-    padding: 35px;
-    border-radius: 12px;
-    gap: 15px;
-  }
-  .landing .wrapper .content .buttons > button {
-    width: 350px;
+  .landing .wrapper .content .card .elements .buttons > div > button {
+    border: none;
+    font-weight: 300;
     font-size: 1.2rem;
     border-radius: 15px;
     padding: 10px 15px;
+    width: inherit;
+    background-color: #800000;
+    color: white;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 549px) and (min-width: 485px) {
+  .landing .wrapper .access .admin {
+    display: none;
+  }
+  .landing .wrapper .content .card {
+    width: 85%;
+  }
+  .landing .wrapper .content .card .elements h1 {
+    font-size: 1.3rem;
+  }
+  .landing .wrapper .content .card .elements .buttons > div {
+    width: 100%;
+  }
+  .landing .wrapper .content .card .elements .buttons > div > button {
+    border: none;
+    font-weight: 300;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    padding: 10px 15px;
+    width: inherit;
+    background-color: #800000;
+    color: white;
+    cursor: pointer;
+  }
+}
+@media only screen and (max-width: 484px) and (min-width: 365px) {
+  .landing .wrapper .access .admin {
+    display: none;
+  }
+  .landing .wrapper .content .card {
+    width: 90%;
+  }
+  .landing .wrapper .content .card .elements h1 {
+    font-size: 1rem;
+  }
+  .landing .wrapper .content .card .elements .buttons > div {
+    width: 100%;
+  }
+  .landing .wrapper .content .card .elements .buttons > div > button {
+    font-size: 1rem;
+    border-radius: 12px;
+  }
+}
+@media only screen and (max-width: 364px) and (min-width: 334px) {
+  .landing .wrapper .access .admin {
+    display: none;
+  }
+  .landing .wrapper .content .card {
+    width: 90%;
+  }
+  .landing .wrapper .content .card .elements h1 {
+    font-size: 0.9rem;
+  }
+  .landing .wrapper .content .card .elements .buttons {
+    gap: 10px;
+  }
+  .landing .wrapper .content .card .elements .buttons > div {
+    width: 100%;
+  }
+  .landing .wrapper .content .card .elements .buttons > div > button {
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 333px) and (min-width: 320px) {
+  .landing .wrapper .access .admin {
+    display: none;
+  }
+  .landing .wrapper .content .card {
+    width: 90%;
+  }
+  .landing .wrapper .content .card .elements h1 {
+    font-size: 0.85rem;
+  }
+  .landing .wrapper .content .card .elements .buttons {
+    gap: 10px;
+  }
+  .landing .wrapper .content .card .elements .buttons > div {
+    width: 100%;
+  }
+  .landing .wrapper .content .card .elements .buttons > div > button {
+    font-size: 0.8rem;
+    border-radius: 10px;
   }
 }
 
@@ -370,17 +398,17 @@
     padding: 15px;
   }
   .form .newform > div label {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     width: 180px;
   }
   .form .newform > div input,
 .form .newform > div select {
     margin-top: 0;
     width: 100%;
-    height: 30px;
+    height: 50px;
     border-radius: 8px;
-    font-size: 1rem;
-    padding: 0 10px;
+    font-size: 1.3rem;
+    padding: 5px 10px;
   }
   .form .newform .generateQLNbtn {
     display: flex;
@@ -392,15 +420,15 @@
   .form .newform .generateQLNbtn > button {
     padding: 8px 35px;
     border-radius: 10px;
-    font-size: 14px;
+    font-size: 1.1rem;
   }
 }
 @media only screen and (max-width: 480px) and (min-width: 320px) {
   .form h1 {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .form .newform {
-    padding: 10px 12px;
+    padding: 5px 12px;
   }
   .form .newform > div {
     padding: 15px;
@@ -414,10 +442,10 @@
 .form .newform > div select {
     margin-top: 0;
     width: 100%;
-    height: 25px;
+    height: 50px;
     border-radius: 6px;
-    font-size: 14px;
-    padding: 0 10px;
+    font-size: 1.2rem;
+    padding: 5px 10px;
   }
   .form .newform .generateQLNbtn {
     display: flex;
@@ -429,7 +457,93 @@
   .form .newform .generateQLNbtn > button {
     padding: 6px 28px;
     border-radius: 8px;
-    font-size: 12px;
+    font-size: 1rem;
+  }
+}
+
+.queueSuccess {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 85vh;
+  width: 100%;
+}
+.queueSuccess .top h3 {
+  font-size: 5rem;
+}
+.queueSuccess .number h1 {
+  font-size: 8rem;
+}
+.queueSuccess .note {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.queueSuccess .note p {
+  font-size: 1.8rem;
+}
+.queueSuccess .button {
+  margin: 20px;
+}
+.queueSuccess .button > button {
+  border: none;
+  font-weight: 300;
+  font-size: 1.4rem;
+  border-radius: 15px;
+  padding: 10px 15px;
+  width: 200px;
+  background-color: #800000;
+  color: white;
+  cursor: pointer;
+}
+@media only screen and (max-width: 768px) and (min-width: 551px) {
+  .queueSuccess .top h3 {
+    font-size: 3.5rem;
+  }
+  .queueSuccess .number h1 {
+    font-size: 5.5rem;
+  }
+  .queueSuccess .note {
+    padding: 0 15px;
+  }
+  .queueSuccess .note p {
+    font-size: 1.3rem;
+  }
+  .queueSuccess .button > button {
+    font-size: 1.2rem;
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 550px) and (min-width: 481px) {
+  .queueSuccess .number h1 {
+    font-size: 5rem;
+  }
+  .queueSuccess .note {
+    padding: 0 10px;
+  }
+  .queueSuccess .note p {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+  .queueSuccess .top h3 {
+    font-size: 2.8rem;
+  }
+  .queueSuccess .number h1 {
+    font-size: 4rem;
+  }
+  .queueSuccess .note {
+    padding: 0 20px;
+  }
+  .queueSuccess .note p {
+    font-size: 0.5rem;
+  }
+  .queueSuccess .button > button {
+    font-size: 1rem;
+    width: 180px;
   }
 }
 
@@ -592,6 +706,46 @@
   cursor: pointer;
 }
 
+.announcement {
+  display: flex;
+}
+.announcement .announcementContent {
+  padding: 20px;
+  width: 100%;
+}
+.announcement .announcementContent form textarea {
+  padding: 10px 20px;
+  width: 100%;
+  min-height: 100px;
+  max-height: 150px;
+  font-size: 1.3rem;
+  border: 1px solid rgb(197, 197, 197);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+.announcement .announcementContent form textarea:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 10px #800000;
+}
+.announcement .announcementContent form .button {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.announcement .announcementContent form .button button {
+  padding: 10px 40px;
+  background-color: #800000;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.announcement .announcementContent form .button button:hover {
+  background-color: #a70000;
+}
+
 .signout {
   display: flex;
   justify-content: center;
@@ -669,6 +823,72 @@
   width: 100%;
 }
 
+.signout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 50px;
+  right: 30px;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  background-color: #800000;
+  border-radius: 80px;
+}
+.signout:hover {
+  cursor: pointer;
+}
+
+.panel {
+  display: flex;
+}
+.panel .content {
+  background: #800000;
+  color: rgb(255, 255, 255);
+  height: 100vh;
+  width: 250px;
+}
+.panel .content .header {
+  margin-top: 70px;
+}
+.panel .content .header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.panel .content .header .logo .sidepanelLogo {
+  height: 150px;
+  width: 150px;
+}
+.panel .content .navigate {
+  margin-top: 60px;
+}
+.panel .content .navigate .linktxt {
+  display: flex;
+  text-decoration: none;
+  padding: 20px 15px;
+  margin-top: 15px;
+  gap: 25px;
+  color: rgb(255, 255, 255);
+}
+.panel .content .navigate .linktxt:hover {
+  background: #a70000;
+  color: rgb(255, 255, 255);
+}
+.panel .content .navigate .linktxt {
+  display: flex;
+  text-decoration: none;
+  padding: 20px 15px;
+  margin-top: 15px;
+  gap: 25px;
+  color: rgb(255, 255, 255);
+}
+.panel .content .navigate .linktxt .navtxt,
+.panel .content .navigate .linktxt .navicon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .wrapper .background {
   height: 15vh;
   width: 100%;
@@ -733,7 +953,7 @@
 .editForm .newform > div select {
   margin-top: 5px;
   width: 435px;
-  height: 45px;
+  height: 50px;
   border: 1px solid rgb(197, 197, 197);
   border-radius: 10px;
   font-size: 1.2rem;
@@ -770,7 +990,7 @@
 }
 @media only screen and (max-width: 768px) and (min-width: 551px) {
   .editForm h1 {
-    font-size: 1.6rem;
+    font-size: 2.5rem;
   }
   .editForm .newform {
     padding: 10px 12px;
@@ -785,8 +1005,8 @@
   .editForm .newform > div input,
 .editForm .newform > div select {
     margin-top: 0;
-    width: 50%;
-    height: 30px;
+    width: 60%;
+    height: 50px;
     border-radius: 8px;
     font-size: 1rem;
     padding: 0 10px;
@@ -806,7 +1026,7 @@
 }
 @media only screen and (max-width: 550px) and (min-width: 481px) {
   .editForm h1 {
-    font-size: 1.6rem;
+    font-size: 2.2rem;
   }
   .editForm .newform {
     padding: 10px 12px;
@@ -821,8 +1041,8 @@
   .editForm .newform > div input,
 .editForm .newform > div select {
     margin-top: 0;
-    width: 100%;
-    height: 30px;
+    width: 55%;
+    height: 50px;
     border-radius: 8px;
     font-size: 1rem;
     padding: 0 10px;
@@ -842,7 +1062,7 @@
 }
 @media only screen and (max-width: 480px) and (min-width: 320px) {
   .editForm h1 {
-    font-size: 1rem;
+    font-size: 12rem;
   }
   .editForm .newform {
     padding: 10px 12px;
@@ -858,8 +1078,8 @@
   .editForm .newform > div input,
 .editForm .newform > div select {
     margin-top: 0;
-    width: 100%;
-    height: 25px;
+    width: 55%;
+    height: 40px;
     border-radius: 6px;
     font-size: 14px;
     padding: 0 10px;
