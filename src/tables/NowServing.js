@@ -9,7 +9,7 @@ export function NowServing() {
     <Table striped bordered hover style={center}>
       <thead>
         <tr>
-          <th style={{ fontSize: "2rem" }}>Queue Line Number</th>
+          <th>Queue Line Number</th>
         </tr>
       </thead>
       <tbody>

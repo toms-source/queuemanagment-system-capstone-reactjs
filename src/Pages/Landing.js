@@ -19,8 +19,7 @@ const Landing = () => {
   };
 
   const viewTables = {
-    color: "#ffd700",
-    textDecoration: "none",
+    color: "blue",
   };
   return (
     <div className="landing">
