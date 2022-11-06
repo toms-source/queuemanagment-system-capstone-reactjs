@@ -37,10 +37,10 @@
         .elements {
           position: relative;
           width: 100%;
-          h1 {
+          .title {
             @include b.flexCenter;
-            // font-weight: 700;
-            // font-size: 1rem;
+            font-weight: 700;
+            font-size: 2.5rem;
           }
           .buttons {
             @include b.flexCenter;
