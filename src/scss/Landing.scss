@@ -39,8 +39,8 @@
           width: 100%;
           h1 {
             @include b.flexCenter;
-            font-weight: 700;
-            font-size: 2rem;
+            // font-weight: 700;
+            // font-size: 1rem;
           }
           .buttons {
             @include b.flexCenter;
