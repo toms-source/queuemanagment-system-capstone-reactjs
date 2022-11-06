@@ -94,7 +94,7 @@
       .content {
         .card {
           .elements {
-            h1 {
+            .title {
               font-size: 1.6rem;
             }
           }
@@ -112,8 +112,8 @@
 
           .elements {
             width: 100%;
-            h1 {
-              font-size: 1.3rem;
+            .title {
+              font-size: 1.5rem;
             }
             .buttons {
               padding: 30px 0;
@@ -150,8 +150,8 @@
         .card {
           width: 80%;
           .elements {
-            h1 {
-              font-size: 1.1rem;
+            .title {
+              font-size: 1.4rem;
             }
             .buttons {
               > div {
@@ -185,8 +185,8 @@
         .card {
           width: 85%;
           .elements {
-            h1 {
-              font-size: 0.9rem;
+            .title {
+              font-size: 1.3rem;
             }
             .buttons {
               > div {
@@ -220,8 +220,8 @@
         .card {
           width: 90%;
           .elements {
-            h1 {
-              font-size: 0.8rem;
+            .title {
+              font-size: 1rem;
             }
             .buttons {
               > div {
@@ -248,7 +248,7 @@
         .card {
           width: 90%;
           .elements {
-            h1 {
+            .title {
               font-size: 0.9rem;
             }
             .buttons {
@@ -277,7 +277,7 @@
         .card {
           width: 90%;
           .elements {
-            h1 {
+            .title {
               font-size: 0.85rem;
             }
             .buttons {
