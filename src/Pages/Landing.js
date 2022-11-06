@@ -41,7 +41,7 @@ const Landing = () => {
         <main className="content">
           <div className="card">
             <div className="elements">
-              <h1>Office of Academic Head Program</h1>
+              <div className="title">Office of Academic Head Program</div>
               <div className="buttons">
                 <div className="generatebtn">
                   <motion.button
