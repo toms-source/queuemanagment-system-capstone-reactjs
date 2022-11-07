@@ -75,13 +75,13 @@ const Landing = () => {
 
         <section id="tables">
           <div className="tables">
-            <h2>QUEUELINE HERE</h2>
+            {/* <h2>QUEUELINE HERE</h2> */}
             <div className="nowServing">
               <h2>Now Serving...</h2>
               <NowServing />
             </div>
             <div className="queueLandin">
-              <h2>Queue</h2>
+              <h2>Queue Line...</h2>
               <QueueLanding />
             </div>
           </div>
