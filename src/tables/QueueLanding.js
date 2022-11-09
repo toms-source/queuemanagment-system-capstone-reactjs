@@ -1,40 +1,35 @@
 import Table from "react-bootstrap/Table";
-import { useState, useEffect, Fragment } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 
 const center = {
   textAlign: "center",
 };
 
-var _ = require("lodash");
-
-const pageSize = 3;
-
 export function QueueLanding() {
-  const [queue, setQueue] = useState([]);
-  const [paginated, setPaginated] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
+  // table with table limit and pagination button
+  const [userData, setUserData] = useState([]);
+  const [currentPage, setCurrentPost] = useState(1);
+  const postPerPage = 5;
+  let pages = [];
 
   useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
+      setUserData(res.data);
       console.table(res.data);
-      setQueue(res.data);
-      // setPaginated(_(res.data).slice(0).take(pageSize).value());
     });
   });
 
-  const queueCount = queue ? Math.ceil(queue.length / pageSize) : 0;
-  if (queueCount === 1) return null;
-  const pages = _.range(1, queueCount + 1);
+  const lastPostIndex = currentPage * postPerPage;
+  const firstPostIndex = lastPostIndex - postPerPage;
+  const currentPost = userData.slice(firstPostIndex, lastPostIndex);
 
-  const pagination = (pageNo) => {
-    setCurrentPage(pageNo);
-    const starting = (pageNo - 1) * pageSize;
-    const paginate = _(queue).slice(starting).take(pageSize).value();
-    setPaginated(paginate);
-  };
+  for (let i = 1; i <= Math.ceil(userData.length / postPerPage); i++) {
+    pages.push(i);
+  }
+
   return (
-    <Fragment>
+    <div>
       <Table striped bordered hover style={center}>
         <thead>
           <tr>
@@ -42,7 +37,7 @@ export function QueueLanding() {
           </tr>
         </thead>
         <tbody>
-          {paginated.map((queue, index) => (
+          {currentPost.map((queue, index) => (
             <tr key={index}>
               <td>{queue.id}</td>
             </tr>
@@ -51,19 +46,20 @@ export function QueueLanding() {
       </Table>
       <nav className="d-flex justify-content-center">
         <ul className="pagination">
-          {pages.map((page) => (
+          {pages.map((page, index) => (
             <li
               className={
                 page === currentPage ? "page-item active" : "page-item"
               }
+              key={index}
             >
-              <p className="page-link" onClick={() => pagination(page)}>
+              <p className="page-link" onClick={() => setCurrentPost(page)}>
                 {page}
               </p>
             </li>
           ))}
         </ul>
       </nav>
-    </Fragment>
+    </div>
   );
 }

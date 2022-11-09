@@ -12,7 +12,14 @@ export function NowServing() {
           <th>Queue Line Number</th>
         </tr>
       </thead>
-      <tbody></tbody>
+      <tbody>
+        <tr>
+          <td>11</td>
+        </tr>
+        <tr>
+          <td>12</td>
+        </tr>
+      </tbody>
     </Table>
   );
 }
