@@ -6,17 +6,16 @@ export default function AnnouncementDBTBL() {
   return (
     <div>
       <Table striped bordered>
-        <thead
-          className="text-center"
-          style={{ backgroundColor: "#800000", color: "white" }}
-        >
+        <thead className="text-center" style={{ backgroundColor: "#FFD700" }}>
           <tr>
+            <th></th>
             <th>Announcements</th>
             <th>Actions</th>
           </tr>
         </thead>
         <tbody className="align-middle">
           <tr>
+            <td>1</td>
             <td>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit,
               facere.
@@ -34,6 +33,7 @@ export default function AnnouncementDBTBL() {
             </td>
           </tr>
           <tr>
+            <td>2</td>
             <td>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis
               excepturi adipisci facilis deleniti mollitia ducimus?
