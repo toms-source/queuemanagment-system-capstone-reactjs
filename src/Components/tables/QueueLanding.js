@@ -16,7 +16,7 @@ export function QueueLanding() {
   useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
       setUserData(res.data);
-      console.table(res.data);
+      // console.table(res.data);
     });
   });
 
@@ -30,10 +30,10 @@ export function QueueLanding() {
 
   return (
     <div>
-      <Table striped bordered hover style={center}>
+      <Table striped bordered style={center}>
         <thead>
           <tr>
-            <th>Queue Line Number</th>
+            <th style={{ backgroundColor: "#FFD700" }}>Queue Line Number</th>
           </tr>
         </thead>
         <tbody>

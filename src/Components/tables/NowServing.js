@@ -6,10 +6,12 @@ const center = {
 
 export function NowServing() {
   return (
-    <Table striped bordered hover style={center}>
+    <Table striped bordered style={center}>
       <thead>
         <tr>
-          <th>Queue Line Number</th>
+          <th style={{ backgroundColor: "#800000", color: "white" }}>
+            Queue Line Number
+          </th>
         </tr>
       </thead>
       <tbody>

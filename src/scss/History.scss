@@ -4,9 +4,13 @@
 .history {
   display: flex;
   .mainContent {
-    @include b.flexCenter;
-    height: 100vh;
+    padding: 20px;
     width: 100%;
+    .title {
+      h1 {
+        padding: 10px 0;
+      }
+    }
   }
 }
 

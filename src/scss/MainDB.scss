@@ -4,9 +4,37 @@
 .main {
   display: flex;
   .mainContent {
-    @include b.flexCenter;
-    height: 100vh;
+    padding: 20px;
     width: 100%;
+    .title {
+      h1 {
+        padding: 10px 0;
+      }
+    }
+    .tables {
+      display: grid;
+      gap: 5rem;
+      .ctrlNowServing {
+        .head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: auto;
+        }
+      }
+      .ctrlQueueLines {
+        .head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: auto;
+        }
+      }
+    }
+    // @include b.flexCenter;
+    // flex-direction: column;
+    // height: 100vh;
+    // width: 100%;
   }
 }
 

@@ -2,6 +2,7 @@ import React from "react";
 import Sidepanel from "../Components/Sidepanel";
 import Signout from "../Components/AdminSignOutbtn";
 import { motion } from "framer-motion";
+import AnnouncementDBTBL from "../Components/tables/AdminTables/AnnouncementDBTBL";
 
 const AnnouncementDB = () => {
   return (
@@ -29,7 +30,9 @@ const AnnouncementDB = () => {
             </motion.button>
           </div>
         </form>
-        <div className="table"></div>
+        <div className="table">
+          <AnnouncementDBTBL />
+        </div>
       </div>
       <div className="signOut">
         <Signout />
