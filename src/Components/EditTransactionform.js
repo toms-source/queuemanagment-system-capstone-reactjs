@@ -23,7 +23,7 @@ const EditTransactionform = () => {
               Email<span style={colorReq}>*</span>
             </label>
             <input
-              type="text"
+              type="search"
               className="txtemail"
               required
               placeholder="Ex. Juan Cruz@yahoo.com"
