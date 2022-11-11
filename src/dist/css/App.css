@@ -63,10 +63,12 @@ html::-webkit-scrollbar-thumb {
   position: relative;
   width: 100%;
 }
-.landing .wrapper .content .card .elements h1 {
+.landing .wrapper .content .card .elements .title {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 700;
+  font-size: 2rem;
 }
 .landing .wrapper .content .card .elements .buttons {
   display: flex;
@@ -96,18 +98,24 @@ html::-webkit-scrollbar-thumb {
 }
 .landing .tables {
   height: 100vh;
-  background: rgb(240, 240, 240);
+}
+.landing .tables .nowServing,
+.landing .tables .queueLandin {
+  padding: 20px 50px;
+}
+.landing .tables .nowServing h2,
+.landing .tables .queueLandin h2 {
+  color: #800000;
 }
 .landing .tables h2 {
   margin: 10px 0;
   padding: 10px 20px;
   text-align: center;
   color: #ffd700;
-  background-color: rgb(240, 240, 240);
 }
 @media only screen and (max-width: 1280px) and (min-width: 1230px) {
-  .landing .wrapper .content .card .elements h1 {
-    font-size: 1.8rem;
+  .landing .wrapper .content .card .elements .title {
+    font-size: 1.6rem;
   }
 }
 @media only screen and (max-width: 1231px) and (min-width: 935px) {
@@ -119,7 +127,7 @@ html::-webkit-scrollbar-thumb {
   .landing .wrapper .content .card .elements {
     width: 100%;
   }
-  .landing .wrapper .content .card .elements h1 {
+  .landing .wrapper .content .card .elements .title {
     font-size: 1.5rem;
   }
   .landing .wrapper .content .card .elements .buttons {
@@ -148,7 +156,7 @@ html::-webkit-scrollbar-thumb {
   .landing .wrapper .content .card {
     width: 80%;
   }
-  .landing .wrapper .content .card .elements h1 {
+  .landing .wrapper .content .card .elements .title {
     font-size: 1.4rem;
   }
   .landing .wrapper .content .card .elements .buttons > div {
@@ -173,7 +181,7 @@ html::-webkit-scrollbar-thumb {
   .landing .wrapper .content .card {
     width: 85%;
   }
-  .landing .wrapper .content .card .elements h1 {
+  .landing .wrapper .content .card .elements .title {
     font-size: 1.3rem;
   }
   .landing .wrapper .content .card .elements .buttons > div {
@@ -198,7 +206,7 @@ html::-webkit-scrollbar-thumb {
   .landing .wrapper .content .card {
     width: 90%;
   }
-  .landing .wrapper .content .card .elements h1 {
+  .landing .wrapper .content .card .elements .title {
     font-size: 1rem;
   }
   .landing .wrapper .content .card .elements .buttons > div {
@@ -216,7 +224,7 @@ html::-webkit-scrollbar-thumb {
   .landing .wrapper .content .card {
     width: 90%;
   }
-  .landing .wrapper .content .card .elements h1 {
+  .landing .wrapper .content .card .elements .title {
     font-size: 0.9rem;
   }
   .landing .wrapper .content .card .elements .buttons {
@@ -237,7 +245,7 @@ html::-webkit-scrollbar-thumb {
   .landing .wrapper .content .card {
     width: 90%;
   }
-  .landing .wrapper .content .card .elements h1 {
+  .landing .wrapper .content .card .elements .title {
     font-size: 0.85rem;
   }
   .landing .wrapper .content .card .elements .buttons {
@@ -353,7 +361,7 @@ html::-webkit-scrollbar-thumb {
 }
 @media only screen and (max-width: 768px) and (min-width: 551px) {
   .form h1 {
-    font-size: 1.6rem;
+    font-size: 2.5rem;
   }
   .form .newform {
     padding: 10px 12px;
@@ -368,8 +376,8 @@ html::-webkit-scrollbar-thumb {
   .form .newform > div input,
 .form .newform > div select {
     margin-top: 0;
-    width: 50%;
-    height: 30px;
+    width: 60%;
+    height: 50px;
     border-radius: 8px;
     font-size: 1rem;
     padding: 0 10px;
@@ -389,7 +397,7 @@ html::-webkit-scrollbar-thumb {
 }
 @media only screen and (max-width: 550px) and (min-width: 481px) {
   .form h1 {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
   .form .newform {
     padding: 10px 12px;
@@ -398,17 +406,17 @@ html::-webkit-scrollbar-thumb {
     padding: 15px;
   }
   .form .newform > div label {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     width: 180px;
   }
   .form .newform > div input,
 .form .newform > div select {
     margin-top: 0;
-    width: 100%;
+    width: 55%;
     height: 50px;
     border-radius: 8px;
-    font-size: 1.3rem;
-    padding: 5px 10px;
+    font-size: 1rem;
+    padding: 0 10px;
   }
   .form .newform .generateQLNbtn {
     display: flex;
@@ -420,15 +428,15 @@ html::-webkit-scrollbar-thumb {
   .form .newform .generateQLNbtn > button {
     padding: 8px 35px;
     border-radius: 10px;
-    font-size: 1.1rem;
+    font-size: 14px;
   }
 }
 @media only screen and (max-width: 480px) and (min-width: 320px) {
   .form h1 {
-    font-size: 1.3rem;
+    font-size: 1.32rem;
   }
   .form .newform {
-    padding: 5px 12px;
+    padding: 10px 12px;
   }
   .form .newform > div {
     padding: 15px;
@@ -441,11 +449,11 @@ html::-webkit-scrollbar-thumb {
   .form .newform > div input,
 .form .newform > div select {
     margin-top: 0;
-    width: 100%;
-    height: 50px;
+    width: 55%;
+    height: 40px;
     border-radius: 6px;
-    font-size: 1.2rem;
-    padding: 5px 10px;
+    font-size: 14px;
+    padding: 0 10px;
   }
   .form .newform .generateQLNbtn {
     display: flex;
@@ -457,7 +465,7 @@ html::-webkit-scrollbar-thumb {
   .form .newform .generateQLNbtn > button {
     padding: 6px 28px;
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 12px;
   }
 }
 
@@ -633,11 +641,27 @@ html::-webkit-scrollbar-thumb {
   display: flex;
 }
 .main .mainContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  padding: 20px;
   width: 100%;
+}
+.main .mainContent .title h1 {
+  padding: 10px 0;
+}
+.main .mainContent .tables {
+  display: grid;
+  gap: 2.5rem;
+}
+.main .mainContent .tables .ctrlNowServing .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+}
+.main .mainContent .tables .ctrlQueueLines .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
 }
 
 .signout {
@@ -645,7 +669,7 @@ html::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 50px;
+  bottom: 30px;
   right: 30px;
   font-size: 3rem;
   color: rgb(255, 255, 255);
@@ -745,13 +769,16 @@ html::-webkit-scrollbar-thumb {
 .announcement .announcementContent form .button button:hover {
   background-color: #a70000;
 }
+.announcement .announcementContent .table {
+  margin-top: 40px;
+}
 
 .signout {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 50px;
+  bottom: 30px;
   right: 30px;
   font-size: 3rem;
   color: rgb(255, 255, 255);
@@ -816,11 +843,11 @@ html::-webkit-scrollbar-thumb {
   display: flex;
 }
 .history .mainContent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  padding: 20px;
   width: 100%;
+}
+.history .mainContent .title h1 {
+  padding: 10px 0;
 }
 
 .signout {
@@ -828,7 +855,7 @@ html::-webkit-scrollbar-thumb {
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 50px;
+  bottom: 30px;
   right: 30px;
   font-size: 3rem;
   color: rgb(255, 255, 255);
@@ -1062,7 +1089,7 @@ html::-webkit-scrollbar-thumb {
 }
 @media only screen and (max-width: 480px) and (min-width: 320px) {
   .editForm h1 {
-    font-size: 12rem;
+    font-size: 2rem;
   }
   .editForm .newform {
     padding: 10px 12px;
