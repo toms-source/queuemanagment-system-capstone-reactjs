@@ -31,9 +31,7 @@ const Landing = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            <abbr title="Admin Access">
-              <AdminPortal onClick={adminAuth} />
-            </abbr>
+            <AdminPortal onClick={adminAuth} />
           </motion.div>
         </div>
 

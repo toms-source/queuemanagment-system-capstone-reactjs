@@ -25,7 +25,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .landing .wrapper .access {
-  position: fixed;
+  position: absolute;
   bottom: 20px;
   right: 20px;
 }

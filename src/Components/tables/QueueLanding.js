@@ -16,7 +16,7 @@ export function QueueLanding() {
   useEffect(() => {
     axios.get("https://jsonplaceholder.typicode.com/users").then((res) => {
       setUserData(res.data);
-      // console.table(res.data);
+      console.table(res.data);
     });
   });
 
