@@ -34,17 +34,15 @@ const EditTransactionform = () => {
             <label htmlFor="transaction">
               Transaction <span style={colorReq}>*</span>
             </label>
-            <select name="transactions" id="transactions">
-              <option value="a" disabled selected hidden>
+            <select name="transactions" id="transactions" required>
+              <option value="" disabled selected hidden>
                 Head of Academic Transactions
               </option>
-              <option value="accreditation">Accreditation of Subjects</option>
-              <option value="add-change-subjects">
-                Adding/Changing of Subjects
-              </option>
-              <option value="overload">Overload</option>
-              <option value="request">Online request for petition</option>
-              <option value="cross-enrollment">Cross-Enrollment</option>
+              <option value="1">Accreditation of Subjects</option>
+              <option value="2">Adding/Changing of Subjects</option>
+              <option value="3">Overload</option>
+              <option value="4">Online request for petition</option>
+              <option value="5">Cross-Enrollment</option>
             </select>
           </div>
 
@@ -52,7 +50,7 @@ const EditTransactionform = () => {
             <label htmlFor="Name" className="label">
               Name<span style={colorReq}>*</span>
             </label>
-            <input type="text" placeholder="Ex. Juan Cruz" />
+            <input type="text" placeholder="Ex. Juan Cruz" required />
           </div>
 
           <div className="generateQLNbtn">
@@ -67,7 +65,7 @@ const EditTransactionform = () => {
             </motion.button>
 
             <motion.button
-              type="button"
+              type="submit"
               className="submit"
               // onClick={}
               whileHover={{ scale: 1.1 }}
